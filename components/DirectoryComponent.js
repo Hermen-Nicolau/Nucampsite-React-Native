@@ -4,12 +4,13 @@ import { ListItem } from 'react-native-elements';
 
 function Directory(props) {
 
-    const renderDirectoryItem = ({item}) => {
+    const renderDirectoryItem = ({ item }) => {
         return (
             <ListItem
                 title={item.name}
                 subtitle={item.description}
-                leftAvatar={{ source: require('./images/react-lake.jpg')}}
+                onPress={() => props.onPress(item.id)}
+                leftAvatar={{ source: require('./images/react-lake.jpg') }}
             />
         );
     };
